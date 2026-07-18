@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
 
 <meta charset="UTF-8">
@@ -14,14 +13,15 @@
 
 </head>
 
-
 <body>
 
 
 <audio id="musica" loop>
-<source src="musica/cumple.mp3" type="audio/mpeg">
+<source src="musica/cumple.mp3">
 </audio>
 
+
+<div class="luces"></div>
 
 
 <section class="inicio">
@@ -30,7 +30,9 @@
 <div class="tarjeta">
 
 
-<img src="fotos/ama1.jpg" class="foto">
+<div class="circulo">
+<img src="fotos/ama1.jpg">
+</div>
 
 
 <h1>
@@ -41,39 +43,45 @@ Feliz Cumpleaños
 
 
 <p>
-Hoy es un día especial porque celebramos
-a una persona increíble.
+Hoy celebramos a la persona que llena
+nuestra vida de amor y alegría.
 </p>
 
 
-<button onclick="mostrarMensaje()">
-Abrir sorpresa 💌
+<button onclick="abrir()">
+🎁 Abrir regalo
 </button>
 
 
 </div>
 
-
 </section>
 
 
 
-<section id="mensaje">
+<section id="carta">
 
 
 <h2>
-Para mi Ama ❤️
+Para la mejor mamá ❤️
 </h2>
 
 
 <p>
 
-Gracias por todo tu amor,
-por tus consejos y por cada sacrificio.
+Gracias Ama por cada abrazo,
+cada consejo y cada esfuerzo.
 
-Eres la mejor mamá del mundo.
+Gracias por ser mi apoyo y mi ejemplo.
 
+Espero que este día esté lleno de felicidad,
+porque te mereces todo lo bonito del mundo.
+
+<br><br>
+
+<strong>
 Te quiero mucho ❤️
+</strong>
 
 </p>
 
@@ -101,7 +109,5 @@ Te quiero mucho ❤️
 
 <script src="script.js"></script>
 
-
 </body>
-
 </html>
