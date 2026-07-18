@@ -1,12 +1,10 @@
-function mostrarMensaje(){
+function abrir(){
 
 
-document.getElementById("mensaje").style.display="block";
+document.getElementById("carta").style.display="block";
 
 
-let musica=document.getElementById("musica");
-
-musica.play();
+document.getElementById("musica").play();
 
 
 
@@ -19,41 +17,70 @@ behavior:"smooth"
 });
 
 
+
+confeti();
+
+
 }
 
 
 
-
-setInterval(()=>{
-
-
-let corazon=document.createElement("div");
+function confeti(){
 
 
-corazon.innerHTML="❤️";
+for(let i=0;i<80;i++){
 
 
-corazon.style.position="fixed";
-
-corazon.style.left=Math.random()*100+"vw";
-
-corazon.style.top="100vh";
-
-corazon.style.fontSize="25px";
-
-corazon.style.animation="subir 5s linear";
+let c=document.createElement("div");
 
 
-document.body.appendChild(corazon);
+c.innerHTML="❤️";
+
+
+c.style.position="fixed";
+
+c.style.left=Math.random()*100+"vw";
+
+c.style.top="-20px";
+
+c.style.fontSize="25px";
+
+c.style.animation="caer 4s linear";
+
+
+document.body.appendChild(c);
 
 
 
 setTimeout(()=>{
 
-corazon.remove();
+c.remove();
 
-},5000);
+},4000);
 
 
+}
 
-},700);
+
+}
+
+
+let estilo=document.createElement("style");
+
+estilo.innerHTML=`
+
+@keyframes caer{
+
+to{
+
+transform:translateY(110vh) rotate(360deg);
+
+opacity:0;
+
+}
+
+}
+
+`;
+
+document.head.appendChild(estilo);
